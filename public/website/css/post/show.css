@@ -1,0 +1,96 @@
+#layout > header, .btns {
+    width: auto;
+}
+.layui-bg-white{
+    background: white;
+}
+h1,h2,h3,h4,h5{
+    color: #636b6f;
+}
+.post-area{
+    border: #d3e0e9 solid 1px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Old Firefox */
+}
+#post_content_area{width: 97%;}
+#segment{
+    border: #d3e0e9 solid 1px;
+    width: 285px;
+    margin-left: 30px;
+    background: #fff;
+    color: #636b6f;
+    box-sizing: border-box;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Old Firefox */
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+
+}
+#segment button{
+    width: 50%;
+}
+#sidebar {
+    width: 285px;
+    overflow: hidden;
+    z-index: 100;
+    border: #d3e0e9 solid 1px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Old Firefox */
+    background: #fff;
+
+    padding-top: 15px;
+    line-height: 24px;
+    /*
+    height: 70%;
+    top: 150px;
+    right: 100px;
+    position: fixed;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;*/
+}
+
+.sidebar_position{
+    position: fixed;
+    top: 100px;
+    height: 70%;
+}
+
+#sidebar li{
+    line-height: 30px;
+}
+#sidebar:hover {
+    overflow: auto;
+}
+
+#sidebar h1 {
+    font-size: 16px;
+}
+
+#custom-toc-container {
+    padding-left: 0;
+    width: 89%;
+    padding-right: 18px!important;
+}
+
+#test-editormd-view, #test-editormd-view2 {
+    padding-left: 0;
+    padding-right: 430px;
+    margin: 0;
+}
+
+.detail-box{padding: 20px;}
+.detail h1{font-size: 24px; line-height: 36px;}
+.fly-detail-info{position: relative; margin: 10px 0 15px;}
+.fly-detail-info .layui-btn{height: 20px; line-height: 20px; vertical-align: top; border-radius: 0;}
+.fly-detail-info .layui-btn+.layui-btn{margin-left: 0;}
+.fly-admin-box{position: relative; display: inline-block; vertical-align: top; margin-left: 20px;}
+.fly-detail-info .fly-list-nums{top: -3px; font-size: 16px;float: right;margin-right: 50px;}
+.fly-detail-info .fly-list-nums i{padding: 0 3px 0 15px!important; font-size: 22px!important; color: #636b6f!important;}
+.fly-list-nums {color: #636b6f!important;}

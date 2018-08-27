@@ -1,0 +1,14 @@
+{
+	"cmsName": "skyrim的博客",
+	"version": "v2.0",
+	"author": "skyrim",
+	"homePage": "https://skytimblog.com",
+	"server": "ubuntu 16",
+	"dataBase": "1.00 2018-08-20",
+	"maxUpload": "2M",
+	"userRights": "超级管理员",
+	"description": "自己的小博客",
+	"powerby": "copyright @2018 skyrim",
+	"record": "京ICP备18012066号",
+	"keywords": "skyrim"
+}

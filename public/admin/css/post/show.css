@@ -1,0 +1,47 @@
+body {padding: 40px;}
+
+#layout > header, .btns {
+    width: auto;
+}
+
+#sidebar {
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index: 100;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+}
+
+#sidebar:hover {
+    overflow: auto;
+}
+
+#sidebar h1 {
+    font-size: 16px;
+}
+
+#custom-toc-container {
+    padding-left: 0;
+}
+
+#test-editormd-view, #test-editormd-view2 {
+    padding-left: 0;
+    padding-right: 430px;
+    margin: 0;
+}
+
+.detail-box{padding: 20px;}
+.detail h1{font-size: 24px; line-height: 36px;}
+.fly-detail-info{position: relative; margin: 10px 0 15px;}
+.fly-detail-info .layui-btn{height: 20px; line-height: 20px; vertical-align: top; border-radius: 0;}
+.fly-detail-info .layui-btn+.layui-btn{margin-left: 0;}
+.fly-admin-box{position: relative; display: inline-block; vertical-align: top; margin-left: 20px;}
+.fly-detail-info .fly-list-nums{top: -3px; font-size: 16px;float: right;margin-right: 50px;}
+.fly-detail-info .fly-list-nums i{padding: 0 3px 0 15px!important; font-size: 22px!important; color: #999;}

@@ -1,0 +1,51 @@
+{
+	"contentManagement": [
+		{
+			"title": "文章列表",
+			"icon": "icon-text",
+			"href": "/admins/post",
+			"spread": false
+		},
+		{
+			"title": "资源分享",
+			"icon": "&#xe641;",
+			"href": "/admins/share",
+			"spread": false
+		},
+		{
+			"title": "网址导航",
+			"icon": "&#xe609;",
+			"href": "/admins/webnav",
+			"spread": false
+		},
+		{
+			"title": "图片管理",
+			"icon": "&#xe64a;",
+			"href": "",
+			"spread": false
+		},{
+			"title": "文章回收站",
+			"icon": "&#xe640;",
+			"href": "",
+			"spread": false
+		}
+	],
+	"systemeSttings": [
+		{
+			"title": "系统基本参数",
+			"icon": "&#xe631;",
+			"href": "",
+			"spread": false
+		},{
+			"title": "系统日志",
+			"icon": "icon-log",
+			"href": "",
+			"spread": false
+		},{
+			"title": "友情链接",
+			"icon": "&#xe64c;",
+			"href": "",
+			"spread": false
+		}
+	]
+}

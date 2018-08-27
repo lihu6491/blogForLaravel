@@ -1,0 +1,51 @@
+.share_item{
+    border: 1px solid #1AA094;
+    text-align: center;
+    border: #d3e0e9 solid 1px;
+    box-sizing: border-box;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Old Firefox */
+    background:#f7f7f7;
+}
+.share-main {
+
+    padding-top: 100px;
+    padding-bottom: 50px;
+    /*
+    background: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    */
+}
+body,html{
+    background: white;
+}
+.share_item img{
+    width: 259px;
+    height: 124px;
+    border: #d3e0e9 solid 1px;
+    box-sizing: border-box;
+    border-radius:5px;
+    -moz-border-radius:5px; /* Old Firefox */
+}
+
+.share_item .share-info{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ .share_item h3{
+     color: #2f4056 !important;
+ }
+
+.share_item span{
+    color:#636b6f;
+}
+
+.share_item .share-abstracts{
+    min-height: 60px;
+    height: 60px;
+    overflow:hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
