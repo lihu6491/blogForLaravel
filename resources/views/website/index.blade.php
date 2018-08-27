@@ -1,79 +1,143 @@
 
 @extends('layouts._website')
-@section('title', '查看文章')
+@section('title', '一个PHP程序员的个人博客')
 @section('content')
-    <link href="/editor-md/css/editormd.preview.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/website/css/post/show.css" media="all" />
+<div class="blog-panel blog-column">
+    <div class="layui-container">
+        <div class="blog-column layui-hide-xs">
+            <i class="layui-icon notify-icon ">&#xe645;</i>开张了...............
+        </div>
+    </div>
+</div>
 
-    <div class="layui-main " style="padding-top: 100px;padding-bottom: 50px">
-        <div class="layui-container ">
-            <div class="layui-row ">
-                <div class="layui-col-md9 post-area layui-bg-white">
-                    <h1>{{$PostInfo['title']}}</h1>
-                    <div class="fly-detail-info">
-                        <span class="layui-badge layui-bg-green fly-detail-column"> 发布时间：{{$PostInfo['created_at']}} </span>
-                        <span class="layui-badge layui-bg-black fly-detail-column"> 分类：{{$PostInfo['tags']}} </span>
-                        <div class="fly-admin-box" data-id="31616"> </div>
-                        <span class="fly-list-nums">
-                        <i class="seraph icon-look"></i>121121
-                        <i class="layui-icon">&#xe63a;</i>4252
-                    </span>
-                    </div>
-                    <div id="post_content_area">
-                        <textarea id="post_content_html" class="layui-hide" >{{$postContentInfo['post_content_markdown_doc']}}</textarea>
-                    </div>
-                    <button style="float: left!important;" class="last_post layui-btn" name="order_post"  post_id ='{{$OrderPost['last']['post_id']}}'  post_title ='{{$OrderPost['last']['title']}}'  @if ($OrderPost['last']['post_id'] == 0 ) disabled @endif title="{{$OrderPost['last']['title']}}" ><i class="layui-icon">&#xe65a;</i>   上一篇</button>
-                    <button style="float: right!important;" class="next_post layui-btn" name="order_post"  post_id ='{{$OrderPost['next']['post_id']}}'  post_title ='{{$OrderPost['next']['title']}}'  @if ($OrderPost['next']['post_id'] == 0 ) disabled @endif title="{{$OrderPost['next']['title']}}" >下一篇  <i class="layui-icon">&#xe65b;</i> </button>
-                </div>
-
-                <div class="layui-col-md3">
-                    <div id="segment">
-                        <div class="layui-btn-group layui-btn-fluid">
-                            <button style="float: left!important;" class="last_post_bottom layui-btn "  post_id ='{{$OrderPost['last']['post_id']}}' name="order_post" post_title ='{{$OrderPost['last']['title']}}'  @if ($OrderPost['last']['post_id'] == 0 ) disabled @endif title="{{$OrderPost['last']['title']}}" ><i class="layui-icon">&#xe65a;</i>   上一篇</button>
-                            <button style="float: right!important;" class="next_post_bottom layui-btn "  post_id ='{{$OrderPost['next']['post_id']}}' name="order_post" post_title ='{{$OrderPost['next']['title']}}'  @if ($OrderPost['next']['post_id'] == 0 ) disabled @endif title="{{$OrderPost['next']['title']}}" >下一篇  <i class="layui-icon">&#xe65b;</i> </button>
+<div class="layui-container">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md8">
+            <div class="blog-panel">
+                <div class="blog-panel-title blog-filter" style="height: 220px!important;">
+                    <center>
+                        <div class="layui-carousel" id="carousels" style="background: none !important ">
+                            <div carousel-item="" >
+                                 @for ($i = 1; $i < 5; $i++)
+                                    <div class="no-background carousels_item"><img class="" src="/image/dnf_gif/{{rand(1,49)}}.jpg"></div>
+                                @endfor
+                            </div>
                         </div>
-                    </div>
+                    </center>
                 </div>
+                <ul class="blog-list" id="postlist">
 
-                <div class="layui-col-md3">
-                    <div id="sidebar">
-                        <center><h4>目录</h4></center>
-                        <hr class="layui-bg-green">
-                        <div class="markdown-body editormd-preview-container" id="custom-toc-container">#custom-toc-container</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="layui-row" style="padding-top: 20px">
-                <div class="layui-col-md9 layui-bg-white"  style="padding-left: 20px;color: black;padding-right: 20px;color: black">
-                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;text-align: center">
-                        <legend><i class="layui-icon">&#xe63a;</i>     留言区</legend>
-                    </fieldset>
-                    <!--PC版-->
-                    <div id="SOHUCS" sid="{{$PostInfo['id']}}"></div>
-                    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-                    <script type="text/javascript">
-                        window.changyan.api.config({
-                            appid: 'cytEkXAVF',
-                            conf: 'prod_815a6ea6445503c41f9ccc8374118080'
-                        });
-                    </script>
-                </div>
+                </ul>
             </div>
 
         </div>
+        <div class="layui-col-md4">
+
+            <div class="blog-panel">
+                <center><h3 class="blog-panel-title">「猿强，则国强。国强，则猿更强」</h3></center>
+            </div>
+
+            <div class="blog-panel">
+                <h3 class="blog-panel-title" style="text-align: center">博主介绍</h3>
+                <div class="layui-row blog-panel-main" style="padding: 15px;">
+
+                    <fieldset class="layui-elem-field" style="text-align: center;">
+                        <legend><img src="/admin/images/face.png" class="face"></legend>
+                        <div class="layui-field-box">
+                            <p> 90后PHP程序员一枚</p>
+                            <br>
+                            <p>爱生活·喜编程·善总结</p>
+                            <br>
+                            <p><i class="layui-icon">&#xe715;</i> 天朝·首都</p>
+                            <br>
+                            <a href="tencent://message/?uin=1187276773&Site=&Menu=yes" onclick="" ><i class="seraph icon-qq contact-way"></i></a>
+                            <a href="https://github.com/lihu6491" target="_blank" ><i class="seraph icon-github contact-way"></i></a>
+                            <a href="mailto:649136262@qq.com" onclick="" ><img src="/mail.png" class="contact-main"></a>
+                        </div>
+                    </fieldset>
+
+                    <div class="layui-clear blog-list-quick tags layui-hide ">
+                        <span class="layui-badge layui-bg-orange">PHP</span>
+                        <span class="layui-badge layui-bg-green">LINUX</span>
+                        <span class="layui-badge layui-bg-cyan">LARVAEL</span>
+                        <span class="layui-badge layui-bg-blue">YII</span>
+                        <span class="layui-badge layui-bg-cyan">LARVAEL</span>
+                        <span class="layui-badge layui-bg-blue">YII</span>
+                        <span class="layui-badge layui-bg-black">NGINX</span>
+                        <span class="layui-badge layui-bg-gray">MYSQL</span>
+                        <span class="layui-badge layui-bg-black">NGINX</span>
+                        <span class="layui-badge layui-bg-gray">MYSQL</span>
+                        <span class="layui-badge layui-bg-orange">PHP</span>
+                        <span class="layui-badge layui-bg-green">LINUX</span>
+                        <span class="layui-badge layui-bg-cyan">LARVAEL</span>
+                        <span class="layui-badge layui-bg-blue">YII</span>
+                        <span class="layui-badge layui-bg-black">NGINX</span>
+                        <span class="layui-badge layui-bg-gray">MYSQL</span>
+                        <span class="layui-badge layui-bg-cyan">LARVAEL</span>
+                        <span class="layui-badge layui-bg-blue">YII</span>
+                        <span class="layui-badge layui-bg-black">NGINX</span>
+                        <span class="layui-badge layui-bg-gray">MYSQL</span>
+                        <a name="signin"> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-panel">
+                <h3 class="blog-panel-title">日历</h3>
+                <div class="layui-row blog-panel-main" style="padding: 15px;">
+                    <div class="layui-clear blog-list-quick">
+                        <div class="site-demo-laydate">
+                            <div class="layui-inline" id="calendar"></div>
+                        </div>
+                        <a name="signin"> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-panel">
+                <h3 class="blog-panel-title">最近分享</h3>
+                <div class="layui-row blog-panel-main" style="padding: 15px;">
+                    <div class="layui-clear blog-list-quick">
+                        <table class="layui-table" lay-skin="nob" id="blog_share_list" >
+                            <tbody>
+                            @foreach ($shareList['data'] as $share)
+                            <tr onclick="document.location.href='/share'">
+                                <td>
+                                    <i class="layui-icon">&#xe756;</i>
+                                    <span>「{{$share['title']}}」</span>
+                                </td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        <a name="signin"> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-panel">
+                <h3 class="blog-panel-title">特别鸣谢</h3>
+                <div class="layui-row blog-panel-main" style="padding: 15px;">
+                    <div class="layui-clear blog-list-quick tag">
+                        <a href="https://www.layui.com/" target="_blank" ><span class="layui-badge layui-bg-black">Lay Ui</span></a>
+                        <a href="https://laravel-china.org/" target="_blank" ><span class="layui-badge">laravel-china</span></a>
+                        <a name="signin"> </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
-    <input type="hidden" id="nav_flag" value="post" />
-
-    <script src="/editor-md/jquery-3.2.1.min.js"></script>
-    <script src="/editor-md/lib/marked.min.js"></script>
-    <script src="/editor-md/lib/prettify.min.js"></script>
-
-    <script src="/editor-md/lib/raphael.min.js"></script>
-    <script src="/editor-md/lib/underscore.min.js"></script>
-    <script src="/editor-md/lib/sequence-diagram.min.js"></script>
-    <script src="/editor-md/lib/flowchart.min.js"></script>
-    <script src="/editor-md/lib/jquery.flowchart.min.js"></script>
-    <script src="/editor-md/editormd.min.js"></script>
-    <script type="text/javascript" src="/website/js/post/show.js"></script>
+</div>
+<input type="hidden" id="nav_flag" value="home" />
+<input type="hidden" id="tags"     value="all" />
+<input type="hidden" id="classify" value="all" />
+<br>
+<script type="text/javascript" src="/website/js/Particleground.js"></script>
+<script type="text/javascript" src="/website/js/index.js"></script>
 @stop
+
+
+
+
