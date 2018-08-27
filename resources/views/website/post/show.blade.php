@@ -45,7 +45,7 @@
             </div>
 
             <div class="layui-row" style="padding-top: 20px">
-                <div class="layui-col-md9 layui-bg-white" style="color: black">
+                <div class="layui-col-md9 layui-bg-white" style="padding-left: 20px;color: black;padding-right: 20px;color: black">
                     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;text-align: center">
                         <legend><i class="layui-icon">&#xe63a;</i>     留言区</legend>
                     </fieldset>
