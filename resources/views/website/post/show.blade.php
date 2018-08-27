@@ -1,6 +1,6 @@
 
 @extends('layouts._website')
-@section('title', '查看文章')
+@section('title', $PostInfo['title'])
 @section('content')
     <link href="/editor-md/css/editormd.preview.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/website/css/post/show.css" media="all" />
