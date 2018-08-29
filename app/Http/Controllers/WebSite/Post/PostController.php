@@ -36,7 +36,7 @@ class PostController extends Controller
         $params['title'] = isset($params['wd']) && !empty($params['wd']) ? $params['wd'] : '';
 
         $PostQueryService = new PostQueryService(['order_id'=>'desc']);
-        $postlist = $PostQueryService->getList();
+        $postlist = $PostQueryService->getWebSiteList();
 
 
         $tagsList = PostService::getTagsAll();
@@ -64,6 +64,10 @@ class PostController extends Controller
         $postContentInfo = $PostContentService->getModel();
 
         $OrderPost =  PostService::getOrderPost($postId);
+        //阅读数+1
+        $ReadNum     = $PostService->getReadNum();
+        $PostService->setReadNum(($ReadNum + 1));
+        $PostService->update();
 
         return view('website.post.show',['PostInfo'=>$PostInfo,'postContentInfo'=>$postContentInfo,'OrderPost'=>$OrderPost]);
     }
@@ -77,7 +81,7 @@ class PostController extends Controller
     {
         $params = $request->all();
         $PostQueryService = new PostQueryService($params);
-        $list = $PostQueryService->getList();
+        $list = $PostQueryService->getWebSiteList();
         if(empty($list))
             return response()->json(['code'=>0,'msg'=>'','count'=>0,'data'=>[]]);
 

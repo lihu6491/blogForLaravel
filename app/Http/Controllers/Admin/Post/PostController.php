@@ -52,8 +52,6 @@ class PostController extends Controller
         $PostService->update();
 
         return response()->json(['code'=>200,'msg'=>'成功']);
-
-
     }
 
     /**
@@ -71,6 +69,10 @@ class PostController extends Controller
         if(!isset($Postmodel['id']) || empty($Postmodel['id']))
             return response()->json(['code'=>'400']);
 
+        //同步标签
+        PostService::syncTag($Postmodel['tags']);
+
+die;
         //添加文章内容
         $params['post_id'] = $Postmodel['id'];
         PostContentService::create($params);
@@ -127,6 +129,9 @@ class PostController extends Controller
         $PostService->setIsOriginal($isOriginal);
         $PostService->setIsTop($isTop);
         $PostService->update();
+
+        //同步标签
+        PostService::syncTag($params['tags']);
 
         //编辑文章内容
         $PostContentService = PostContentService::getInstance($postId);

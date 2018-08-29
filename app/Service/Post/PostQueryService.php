@@ -3,6 +3,7 @@
 namespace App\Service\Post;
 
 use App\Model\PostModel;
+use Illuminate\Support\Facades\Auth;
 
 class PostQueryService
 {
@@ -86,8 +87,6 @@ class PostQueryService
         $rest = $rest->where('is_del', '=', 0);
         if(isset($this->title) && !empty($this->title))
             $rest = $rest->where('title', 'like', '%'.$this->title.'%');
-
-
         if(isset($this->classify) && !empty($this->classify)  && $this->classify !='all')
             $rest = $rest->where('classify', '=',$this->classifyList[$this->classify]);
 
@@ -100,6 +99,34 @@ class PostQueryService
         }else{
             $rest = $rest->orderby('id','desc')
             ->paginate ($this->pagesize, $this->selectColumn, $pageName = 'page', $this->page);
+        }
+        return  $this->procQueryData($rest->toArray());
+    }
+
+    /**获取列表
+     *
+     * @return array
+     */
+    public function getWebSiteList(){
+
+        $rest = PostModel :: whereNotNull('id');
+        $rest = $rest->where('is_del', '=', 0);
+        $rest = $rest->where('is_hide', '=', 0);
+
+        if(isset($this->title) && !empty($this->title))
+            $rest = $rest->where('title', 'like', '%'.$this->title.'%');
+        if(isset($this->classify) && !empty($this->classify)  && $this->classify !='all')
+            $rest = $rest->where('classify', '=',$this->classifyList[$this->classify]);
+
+        if(isset($this->tags) && !empty($this->tags) && $this->tags !='all')
+            $rest = $rest->where('tags', 'like', '%'.$this->tags.'%');
+
+        if(isset($this->order_id) && !empty($this->order_id)){
+            $rest = $rest->orderby('is_top','desc')->orderby('updated_at','desc')
+                ->paginate ($this->pagesize, $this->selectColumn, $pageName = 'page', $this->page);
+        }else{
+            $rest = $rest->orderby('id','desc')
+                ->paginate ($this->pagesize, $this->selectColumn, $pageName = 'page', $this->page);
         }
         return  $this->procQueryData($rest->toArray());
     }

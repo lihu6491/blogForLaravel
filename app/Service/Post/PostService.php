@@ -252,5 +252,46 @@ class PostService  extends PostAbstractService
         return $rest;
     }
 
+    /**文章阅读
+     * @param $postId
+     * @return bool
+     */
+    public function read($postId)
+    {
+        if($postId < 1)
+            return false;
+
+        $this->model->read_num = $this->readNum;
+        $this->model->save();
+
+        return true;
+    }
+
+
+    /**
+     * 同步标签
+     * @param $tagsList
+     * @return bool
+     */
+    public static function syncTag($tagsList)
+    {
+        if(empty($tagsList))
+            return false;
+
+        if(!is_array($tagsList)){
+            $tagsList = explode(',',trim($tagsList,','));
+        }
+
+        foreach($tagsList as $key=>$tag){
+            $tagModel = DB::table('tags')->where('name','=', $tag)->get()->toArray();
+            if(!$tagModel){
+
+                DB::table('tags')->insert(['name'=>$tag,'num'=>0]);
+            }
+        }
+
+        return true;
+
+    }
 
 }

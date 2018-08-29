@@ -16,7 +16,6 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-
         if(Auth::guard('admin')->user())
             return $next($request);
 

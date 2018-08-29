@@ -15,8 +15,8 @@
                         <span class="layui-badge layui-bg-black fly-detail-column"> 分类：{{$PostInfo['tags']}} </span>
                         <div class="fly-admin-box" data-id="31616"> </div>
                         <span class="fly-list-nums">
-                        <i class="seraph icon-look"></i>121121
-                        <i class="layui-icon">&#xe63a;</i>4252
+                        <i class="seraph icon-look"></i>{{$PostInfo['read_num']}}
+                        <i class="layui-icon">&#xe63a;</i>{{$PostInfo['comments_num']}}
                     </span>
                     </div>
                     <div id="post_content_area">
