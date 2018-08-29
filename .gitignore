@@ -3,7 +3,8 @@
 /app/Http/routes.php
 /public/hot
 /public/cms
-/public/image
+/public/image/dnf_gif
+/public/image/load
 /public/storage
 /storage/*.key
 /vendor

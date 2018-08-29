@@ -42,7 +42,7 @@
                     <div class="layui-row blog-panel-main" style="padding: 15px;">
 
                         <fieldset class="layui-elem-field" style="text-align: center;">
-                            <legend><img src="/admin/images/face.png" class="face"></legend>
+                            <legend><img src="/image/header.jpg" class="face"></legend>
                             <div class="layui-field-box">
                                 <p> 90后PHP程序员一枚</p>
                                 <br>
@@ -52,7 +52,7 @@
                                 <br>
                                 <a href="tencent://message/?uin=1187276773&Site=&Menu=yes" onclick="" ><i class="seraph icon-qq contact-way"></i></a>
                                 <a href="https://github.com/lihu6491" target="_blank" ><i class="seraph icon-github contact-way"></i></a>
-                                <a href="mailto:649136262@qq.com" onclick="" ><img src="/mail.png" class="contact-main"></a>
+                                <a href="mailto:649136262@qq.com" onclick="" ><img src="/image/mail.png" class="contact-main"></a>
                             </div>
                         </fieldset>
 

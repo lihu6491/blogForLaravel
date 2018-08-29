@@ -125,6 +125,7 @@ layui.use(['bodyTab','form','carousel','util','laydate','element','layer','jquer
         postStr += '<div class="layui-row layui-col-space10">';
         postStr += '<div class="layui-col-md3">';
         postStr += '<div class="grid-demo grid-demo-bg1">';
+
         if(!post.slightly){
             postStr += '<img src="/uploads/default.jpg">';
         }else{
