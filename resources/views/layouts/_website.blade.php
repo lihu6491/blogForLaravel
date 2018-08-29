@@ -38,7 +38,7 @@
 
 <div class="blog-header layui-bg-black">
     <div class="layui-container">
-        <a class="blog-logo" href="/"> <img src="/logo.png" style="width: 135px;height: 37px;" alt="layui" /> </a>
+        <a class="blog-logo" href="/"> <img src="/image/logo.png" style="width: 135px;height: 37px;" alt="layui" /> </a>
         <ul class="layui-nav blog-nav layui-hide-xs">
             <li class="layui-nav-item " id='home'> <a href="/"><i class="layui-icon iconfont ">&#xe68e;</i>首页</a> </li>
             <li class="layui-nav-item " id='post'> <a href="/post"><i class="layui-icon iconfont ">&#xe609;</i>文章专栏</a> </li>
