@@ -17,7 +17,7 @@ layui.use(['form','layer','layedit','laydate','upload'],function(){
             var num = parseInt(4*Math.random());  //生成0-4的随机数，随机显示一个头像信息
             $('.thumbImg').attr('src',res.Msg.url);
             $('.thumbBox').css("background","#fff");
-            $('#slightly').attr('value',res.Msg.url);
+            $('#cover').attr('value',res.Msg.url);
         }
     });
 
