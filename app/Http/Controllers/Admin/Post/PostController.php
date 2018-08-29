@@ -71,8 +71,6 @@ class PostController extends Controller
 
         //同步标签
         PostService::syncTag($Postmodel['tags']);
-
-die;
         //添加文章内容
         $params['post_id'] = $Postmodel['id'];
         PostContentService::create($params);
