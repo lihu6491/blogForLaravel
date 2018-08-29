@@ -69,7 +69,7 @@ return [
             //storage_path();/storage目录
             //public_path();/public目录
             'root' => public_path('uploads'),//文件存储地址
-            'url' => env('APP_URL').'/uploads',//公共访问地址
+            'url' => '/uploads',//公共访问地址
             'visibility' => 'public',
         ],
 

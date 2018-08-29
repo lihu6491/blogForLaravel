@@ -3,6 +3,7 @@
 /app/Http/routes.php
 /public/hot
 /public/cms
+/public/uploads
 /public/image/dnf_gif
 /public/image/load
 /public/storage
