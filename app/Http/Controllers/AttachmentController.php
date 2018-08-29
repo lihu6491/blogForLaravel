@@ -90,6 +90,33 @@ class AttachmentController extends  Controller
 
     }
 
+    /**上传文章封面
+     * @param Request $request
+     * @return array|\Illuminate\Http\JsonResponse
+     */
+    public function uploadsPostCover(Request $request)
+    {
+        $file      = $request->file('file');//得到控件name为[file]的附件对象
+
+        //对附件做有效性验证
+        $validRes  = $this->AttachmentisValid ( $file, $this->allowSizeMin, $this->allowSizeMax, $this->allowMimeType );
+
+        if($validRes['Status'] == 'Erro')
+            return $validRes;
+
+        //关键处
+        // 上传文件至blogPublic本地存储空间（目录）
+        $res = Storage::disk('blogPublic')->put($validRes['Msg']['fileName'], file_get_contents($validRes['Msg']['realPath']));
+
+        //获取公开访问地址
+        $url = Storage::disk('blogPublic')->url($validRes['Msg']['fileName']);
+
+        if(!$res)
+            return response()->json(['Status'=>'Erro','Msg'=>config('msg.attachment.2')]);
+
+        return response()->json(['Status'=>'Success','Msg'=> ['url'=>$url]]);
+    }
+
     /**
      * 验证文件是否可以上传
      * @param $file

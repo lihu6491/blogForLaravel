@@ -2,6 +2,7 @@
 /routes/web.php
 /app/Http/routes.php
 /public/hot
+/public/cms
 /public/image
 /public/storage
 /storage/*.key

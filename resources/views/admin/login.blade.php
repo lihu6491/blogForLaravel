@@ -16,7 +16,7 @@
 </head>
 <body class="loginBody">
 <form class="layui-form">
-    <div class="login_face"><img src="/jf.jpg" class="userAvatar"></div>
+    <div class="login_face"><img src="/image/header.jpg" class="userAvatar"></div>
     <div class="layui-form-item input-item">
         <label for="userName">用户名</label>
         <input type="text" placeholder="请输入用户名" autocomplete="off" id="userName" name="userName" class="layui-input" lay-verify="required">
@@ -30,7 +30,6 @@
     <div class="layui-form-item input-item layui-hide" id="imgCode">
         <label for="code">验证码</label>
         <input type="text" placeholder="请输入验证码" autocomplete="off" id="code" class="layui-input">
-        <img src="/admin/images/code.jpg">
     </div>
     <div class="layui-form-item">
         <button class="layui-btn layui-block" lay-filter="login" lay-submit>登录</button>

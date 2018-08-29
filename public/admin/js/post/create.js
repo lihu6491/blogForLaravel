@@ -71,8 +71,15 @@ layui.use(['form','layer','layedit','laydate','upload'],function(){
     }
     //新增
     form.on("submit(addpost)",function(data){
-        //弹出loading
+        var post_content = $("[name='post_content_markdown_doc']").val();
+        var reg = /\S/;
 
+        if(!reg.test(post_content)){
+            layer.msg('文章内容不能为空');
+            return false;
+        }
+
+        //弹出loading
         var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
         var dataField = data.field;
 
@@ -106,8 +113,16 @@ layui.use(['form','layer','layedit','laydate','upload'],function(){
 
     //编辑
     form.on("submit(editpost)",function(data){
-        //弹出loading
 
+        var post_content = $("[name='post_content_markdown_doc']").val();
+        var reg = /\S/;
+
+        if(!reg.test(post_content)){
+            layer.msg('文章内容不能为空');
+            return false;
+        }
+
+        //弹出loading
         var index = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
         var dataField = data.field;
 

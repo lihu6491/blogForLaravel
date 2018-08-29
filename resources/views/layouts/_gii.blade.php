@@ -53,7 +53,7 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="/header.png" class="layui-nav-img">
+                    <img src="/image/header.jpg" class="layui-nav-img">
                     Coder
                 </a>
                 <dl class="layui-nav-child">

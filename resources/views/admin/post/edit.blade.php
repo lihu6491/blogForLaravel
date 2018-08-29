@@ -55,7 +55,7 @@
             <div class="layui-col-md3 layui-col-xs5">
                 <div class="layui-upload-list thumbBox mag0 magt3">
                     <img class="layui-upload-img thumbImg " src="{{$PostInfo['slightly']}}">
-                    <input class="layui-hide" name="slightly" id="slightly" value="{{$PostInfo['slightly']}}">
+                    <input class="layui-hide" name="slightly" id="slightly" value="{{!$PostInfo['slightly']?'http://localhost/uploads/default.jpg':$PostInfo['slightly']}}">
                 </div>
             </div>
         </div>
