@@ -34,7 +34,7 @@ layui.use(['bodyTab','form','carousel','util','laydate','element','layer','jquer
     layer = parent.layer === undefined ? layui.layer : top.layer;
 
     //轮播
-
+/*
     carousel.render({
         elem: '#carousels',
         autoplay:true,
@@ -46,7 +46,7 @@ layui.use(['bodyTab','form','carousel','util','laydate','element','layer','jquer
 
 
     });
-
+*/
     //日历
     laydate.render({
         elem: '#calendar'

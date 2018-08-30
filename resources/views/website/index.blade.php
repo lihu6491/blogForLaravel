@@ -18,9 +18,7 @@
                         <center>
                             <div class="layui-carousel" id="carousels" style="background: none !important ">
                                 <div carousel-item="" >
-                                    @for ($i = 1; $i < 5; $i++)
-                                        <div class="no-background carousels_item"><img class="" src="/image/dnf_gif/{{rand(1,49)}}.jpg"></div>
-                                    @endfor
+
                                 </div>
                             </div>
                         </center>
