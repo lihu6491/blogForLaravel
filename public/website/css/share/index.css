@@ -1,11 +1,11 @@
 .share_item{
     border: 1px solid #1AA094;
     text-align: center;
-    border: #d3e0e9 solid 1px;
+    border: #1AA094 solid 1px;
     box-sizing: border-box;
     border-radius:5px;
     -moz-border-radius:5px; /* Old Firefox */
-    background:#f7f7f7;
+    background:#ffffff;
 }
 .share-main {
 
