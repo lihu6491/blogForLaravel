@@ -91,6 +91,8 @@
     <input type="hidden" id="post_title"    value="{{$params['title']}}" />
 
     <br>
+    <script src="/editor-md/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/website/js/underscore-min.js"></script>
     <script type="text/javascript" src="/website/js/Particleground.js"></script>
     <script type="text/javascript" src="/website/js/index.js"></script>
 @stop

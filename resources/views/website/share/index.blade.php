@@ -11,7 +11,7 @@
             @foreach ($ShareList as $share)
             <div class="layui-col-md3">
                 <div class="grid-demo grid-demo-bg1 share_item">
-                    <img src="{{$share['cover']}}"/>
+                    <img src="/image/loading.gif"  data-src="{{$share['cover']}}" />
                     <div class="share-info">
                         <h3>{{$share['title']}}</h3>
                        <div class="share-abstracts" title="{{$share['abstracts']}}">
@@ -30,7 +30,8 @@
         </div>
     </div>
     <input type="hidden" id="nav_flag" value="share" />
-
+    <script src="/editor-md/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/website/js/underscore-min.js"></script>
     <script type="text/javascript" src="/website/js/share/index.js"></script>
 
 @stop
