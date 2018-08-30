@@ -134,6 +134,8 @@
     <input type="hidden" id="tags"     value="all" />
     <input type="hidden" id="classify" value="all" />
     <br>
+    <script src="/editor-md/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/website/js/underscore-min.js"></script>
     <script type="text/javascript" src="/website/js/Particleground.js"></script>
     <script type="text/javascript" src="/website/js/index.js"></script>
 @stop
