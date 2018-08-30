@@ -72,7 +72,7 @@ class PostController extends Controller
         if(!isset($PostContentService) || empty($PostContentService)){
             abort(400);die;
         }
-        
+
         $postContentInfo = $PostContentService->getModel();
 
         $OrderPost =  PostService::getOrderPost($postId);

@@ -98,6 +98,7 @@ layui.use(['bodyTab','form','carousel','util','laydate','element','layer','jquer
                 next(lis.join(''), page < rest.last_page);
                 //查看文章
                 $('.blog-list').find('li').click(function(){
+                    console.log('show post by '+$(this).attr('post_id'));
                     window.open('/post/show/'+$(this).attr('post_id'));
                 });
             });
