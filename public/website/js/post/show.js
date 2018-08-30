@@ -47,9 +47,9 @@ layui.use(['form','util', 'layer','layedit', 'laydate','element','jquery'], func
         var winPos = $(window).scrollTop();
 
         if(winPos >500){
-            // $("#sidebar").addClass('sidebar_position');
+             $("#sidebar").addClass('sidebar_position');
         }else{
-            //$("#sidebar").removeClass('sidebar_position');
+            $("#sidebar").removeClass('sidebar_position');
         }
 
     });

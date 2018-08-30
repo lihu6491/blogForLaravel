@@ -59,8 +59,8 @@ h1,h2,h3,h4,h5{
 
 .sidebar_position{
     position: fixed;
-    top: 100px;
-    height: 70%;
+    top: 80px;
+    height: 75%;
 }
 
 #sidebar li{
