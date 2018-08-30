@@ -1,6 +1,6 @@
 
 @extends('layouts._website')
-@section('title', '一个PHP程序员的个人博客')
+@section('title', '一个程序员的个人博客')
 @section('content')
     <div class="blog-panel blog-column">
         <div class="layui-container">

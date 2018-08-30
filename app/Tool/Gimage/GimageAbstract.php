@@ -8,7 +8,7 @@
 
 namespace App\Tools\Gimage;
 
-use Intervention\Image\ImageManagerStatic as Image;
+//use Intervention\Image\ImageManagerStatic as Image;
 use App\Tools\Gimage\ImgCompress;
 
 abstract class GimageAbstract

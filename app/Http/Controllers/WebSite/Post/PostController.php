@@ -52,15 +52,27 @@ class PostController extends Controller
      */
     public function show(Request $request)
     {
+
         $postId = $request->route('id');
 
-        if(!isset($postId) || empty($postId))
-            return response()->json(['code'=>400,'msg'=>'文章不存在']);
+        if(!isset($postId) || empty($postId)){
+            abort(400);die;
+        }
+
 
         $PostService = PostService::getInstance($postId);
+        if(!isset($PostService) || empty($PostService)){
+            abort(400);
+            die;
+        }
+
         $PostInfo    = $PostService->getModel();
 
         $PostContentService = PostContentService::getInstance($postId);
+        if(!isset($PostContentService) || empty($PostContentService)){
+            abort(400);die;
+        }
+        
         $postContentInfo = $PostContentService->getModel();
 
         $OrderPost =  PostService::getOrderPost($postId);
